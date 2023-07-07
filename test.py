@@ -58,15 +58,14 @@ def pingpong(n):
         if x == 1:
             return 1
         if x % 8 == 0 or check_contain(x):
-            return -helper(x-1)
+            return -helper(x - 1)
         else:
-            return helper(x-1)
+            return helper(x - 1)
 
     if n == 1:
         return 1
     if n > 1:
-        return pingpong(n-1) + helper(n-1)
-
+        return pingpong(n - 1) + helper(n - 1)
 
 
 print(pingpong(100))
@@ -87,3 +86,8 @@ print(pingpong(100))
         i += 1
     return j
 """
+"""Typing test implementation"""
+
+
+
+
