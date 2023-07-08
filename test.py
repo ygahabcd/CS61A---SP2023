@@ -88,6 +88,22 @@ print(pingpong(100))
 """
 """Typing test implementation"""
 
+def flatten(s):
+    ret = []
+
+    def helper(x, y):
+        for i in range(len(x)):
+            if type(x[i]) == list:
+                return helper(x[i], y)
+            else:
+                print(x[i])
+                y.append(x[i])
+
+    helper(s, ret)
+    return ret
+
+x = [1, [2, 3], 4]
+print(flatten(x))
 
 
 
